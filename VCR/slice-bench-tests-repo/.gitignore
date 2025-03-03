@@ -1,0 +1,9 @@
+.conda
+concept-csv
+jsons
+__pycache__
+wack
+*.hdf5
+*.logs
+generated_tests
+*.zip

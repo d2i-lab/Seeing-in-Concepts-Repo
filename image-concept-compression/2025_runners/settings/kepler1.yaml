@@ -1,0 +1,47 @@
+coco_path: &coco_path /data/users/jie/data-slicing/COCO/
+bdd_path: &bdd_path /data/users/jie/data-slicing/bdd100k/
+
+datasets:
+  # traintrain2017_fixed_clip_only_sam:
+    # embed_path: !join [ *coco_path, 'embeds/train2017_fixed_clip_only/' ]
+    # img_path: !join [ *coco_path, 'train2017/' ]
+    # pickle_path: !join [ *coco_path, 'embeds/coco-2017-train-realclip-realsam.pkl' ]
+  # train2017_fixed_maskclip_mobilesam:
+  #   embed_path: !join [ *coco_path, 'embeds/train2017_mobilesam_fixed_maskclip' ]
+  #   img_path: !join [ *coco_path, 'train2017/' ]
+  #   pickle_path: !join [ *coco_path, 'embeds/coco-2017-train-clip-embeds-fast-2.pkl' ]
+
+  train2017_maskclip: # Original
+    embed_path: !join [ *coco_path, 'embeddings/coco-2014-val-clip-embeds-532' ]
+    img_path: !join [ *coco_path, 'val2014/' ]
+    pickle_path: coco-2014-val-clip-embeds-532-fast.pkl
+
+  # bddtrain_fixed_maskclip_mobilesam: # 
+  #   embed_path: !join [ *bdd_path, 'embeds/' ]
+  #   img_path: !join [ *bdd_path, 'images/100k/train/' ]
+  #   pickle_path: !join [ *bdd_path, 'embeds/bdd100k_train_maskclip.pkl' ]
+
+index_settings:
+  default:
+    k_coarse: 512
+    m: 64
+    nbits: 8
+    nprobes: 3
+
+  probe25:
+    k_coarse: 512
+    m: 64
+    nbits: 8
+    nprobes: 25
+
+  thousand:
+    k_coarse: 1023
+    m: 64
+    nbits: 8
+    nprobes: 3
+
+sweep_settings:
+  k_coarse: [256, 512,]
+  m: [64, 128, 256,]
+  nbits: [8,]
+  nprobes: [5, 10, 25]

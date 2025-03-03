@@ -1,0 +1,11 @@
+matplotlib 
+networkx
+pydantic-settings
+pydantic
+fastapi
+uvicorn
+h5py
+opencv-python
+loguru
+mlxtend
+umap

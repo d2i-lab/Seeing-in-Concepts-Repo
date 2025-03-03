@@ -1,0 +1,16 @@
+# React
+/node_modules
+/build
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+.DS_Store
+
+**/.git-tmp
+
+cluster-explorer/temp-imgs/*
+*.pkl

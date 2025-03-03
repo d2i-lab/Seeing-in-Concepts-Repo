@@ -1,0 +1,106 @@
+coco_path: &coco_path /data/users/jie/data-slicing/COCO/
+bdd_path: &bdd_path /data/users/jie/data-slicing/bdd100k/
+lvis_path: &lvis_path /data/users/jie/data-slicing/LVIS/
+datasets:
+  train2017_fixed_maskclip_mobilesam:
+    embed_path: !join [ *coco_path, 'embeds/train2017_mobilesam_fixed_maskclip' ]
+    img_path: !join [ *coco_path, 'train2017/' ]
+    pickle_path: !join [ *coco_path, 'embeds/coco-2017-train-clip-embeds-fast-2.pkl' ]
+
+  train2017_maskclip: # Original
+    embed_path: !join [ *coco_path, 'embeds/train2017_maskclip' ]
+    img_path: !join [ *coco_path, 'train2017/' ]
+    pickle_path: !join [ *coco_path, 'embeds/coco-2017-train-clip-embeds-fast.pkl' ]
+
+  bddtrain_fixed_maskclip_mobilesam: # 
+    embed_path: !join [ *bdd_path, 'embeds/' ]
+    img_path: !join [ *bdd_path, 'images/100k/train/' ]
+    pickle_path: !join [ *bdd_path, 'embeds/bdd100k_train_maskclip_mobile-fast.pkl' ]
+
+  train2017_clip:
+    embed_path: !join [ *coco_path, 'embeds/train2017_fixed_clip_only/' ]
+    img_path: !join [ *coco_path, 'train2017/' ]
+    pickle_path: !join [ *coco_path, 'embeds/train2017_fixed_clip_only-fast.pkl' ]
+
+  train2017_dino:
+    embed_path: !join [ *coco_path, 'embeds/train2017_vitl_fixed_dino_2/' ]
+    img_path: !join [ *coco_path, 'train2017/' ]
+    pickle_path: !join [ *coco_path, 'embeds/train2017_vitl_fixed_dino_2-fast.pkl' ]
+
+  ###########################
+
+  train2017_fixed_maskclip:
+    embed_path: !join [ *coco_path, 'embeds/train2017_vitl_fixed_maskclip' ]
+    img_path: !join [ *coco_path, 'train2017/' ]
+    pickle_path: !join [ *coco_path, 'embeds/train2017_vitl_fixed_maskclip-fast.pkl' ]
+
+  lvis_maskclip:
+    embed_path: !join [ *lvis_path, 'embeds/train2017_maskclip' ]
+    img_path: !join [ *lvis_path, 'train2017/' ]
+    pickle_path: !join [ *lvis_path, 'embeds/lvis_train_maskclip.pkl' ]
+
+  bddtrain_fixed_maskclip:
+    embed_path: !join [ *bdd_path, 'embeds/sam_maskclip' ]
+    img_path: !join [ *bdd_path, 'images/100k/train/' ]
+    pickle_path: !join [ *bdd_path, 'embeds/bdd100k_train_maskclip-fast.pkl' ]
+
+index_settings:
+  default:
+    k_coarse: 512
+    m: 64
+    nbits: 8
+    nprobes: 3
+
+  default128:
+    k_coarse: 512
+    m: 128
+    nbits: 8
+    nprobes: 3
+
+  probe25:
+    k_coarse: 512
+    m: 64
+    nbits: 8
+    nprobes: 25
+
+  thousand:
+    k_coarse: 1023
+    m: 64
+    nbits: 8
+    nprobes: 3
+
+  thousand_one_probe:
+    k_coarse: 1023
+    m: 64
+    nbits: 8
+    nprobes: 1
+
+  thousand_five_probe_128:
+    k_coarse: 1023
+    m: 128
+    nbits: 8
+    nprobes: 5
+
+  thousand_five_probe:
+    k_coarse: 1023
+    m: 64
+    nbits: 8
+    nprobes: 5
+
+  thousand_ten_probe:
+    k_coarse: 1023
+    m: 64
+    nbits: 8
+    nprobes: 10
+
+  thousand_twenty_probe:
+    k_coarse: 1023
+    m: 64
+    nbits: 8
+    nprobes: 20
+
+sweep_settings:
+  k_coarse: [256, 512, 1023]
+  m: [64, 128, 256, 512]
+  nbits: [8,]
+  nprobes: [5, 10, 25]

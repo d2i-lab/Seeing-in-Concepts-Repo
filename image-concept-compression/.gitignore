@@ -1,0 +1,9 @@
+*.json
+*.pyc
+*.pkl
+*log
+*.index
+*tests*idx*
+*cache*
+*npy
+*pyc

@@ -1,0 +1,14 @@
+# React
+/node_modules
+/build
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+.DS_Store
+.env
+
+**/.git-tmp

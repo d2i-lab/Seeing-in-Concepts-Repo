@@ -1,0 +1,1 @@
+{"csv": "/home/jxu680/data-slicing-pipeline/mm-post-processing/1-pair-bboxes/vgg_full_improved_80_pair1", "img_dir": "/data/users/jie/data-slicing/genome/VG_100K", "n_boxes": 2000, "n_classes": 15, "injection": "kmeans_20", "target_dim": 50, "error_type": "normal_outlier_only"}
