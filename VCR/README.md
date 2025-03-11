@@ -2,7 +2,7 @@
 
 This repository contains code for our paper, where we describe a new method for understanding images with visual concepts.
 <figure>
-<img src="/docs/overview.png" height="450">
+<img src="docs/overview.png" height="450">
 <!-- <figcaption>A depiction of the VCR pipeline with image segmentation, concept formation, and data slicing</figcaption> -->
 </figure>
 
@@ -12,22 +12,22 @@ Specifically this repository contains instructions on how to deploy our interfac
 
 ## Pages
 1. Interface Deployment (here) - for deploying the interface
-2. [Custom Detection Results](/docs/custom-detections.md) - for creating custom detection results
-3. [Evaluation](/docs/evaluation.md) - for setting up evaluation
+2. [Custom Detection Results](docs/custom-detections.md) - for creating custom detection results
+3. [Evaluation](docs/evaluation.md) - for setting up evaluation
 
 ## Datasets
 For VCR, we use the MS-COCO dataset found [here](https://cocodataset.org). For each image dataset, we additionally require the concept data. 
 To make deployment easier we have packaged COCO 2014 validation data [here (pw=coco-coco)](). Please download the data and unzip it accordingly. After extracting, run the following to download COCO 2014 validation directly from the website: `cd coco-dataset/imgs && bash download.sh`.
 
 ## Object Detection Results
-While we provide COCO 2014 object detection result in the above dataset, users interested in evaluating their own detection results can create their own detection results by following our guide [here](/docs/custom-detections.md). If users want to simply visualize the demo, skip the linked guide.
+While we provide COCO 2014 object detection result in the above dataset, users interested in evaluating their own detection results can create their own detection results by following our guide [here](docs/custom-detections.md). If users want to simply visualize the demo, skip the linked guide.
 
 ## Interface Setup
 The interface is implemented in two parts: (1) the frontend and (2) the backend. The frontend is written in Javascript with
 the React framework, while the backend is implemented in Python with the FastAPI framework.
 
 <figure>
-<img src="/docs/ui-example-1.png" height="550">
+<img src="docs/ui-example-1.png" height="550">
 <!-- <figcaption>Mining results from the interface.</figcaption> -->
 </figure>
 
