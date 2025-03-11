@@ -9,16 +9,16 @@ This repository contains code for (1) VCR, a slice discovery framework for objec
 
 <figure>
 <img src="docs/vcr_diag.png" height=100>
-<figcaption>A depiction of the VCR pipeline with image segmentation, concept formation, and data slicing</figcaption>
+<!-- <figcaption>A depiction of the VCR pipeline with image segmentation, concept formation, and data slicing</figcaption> -->
 </figure>
-<!-- *A depiction of the VCR pipeline with image segmentation, concept formation, and data slicing.* -->
+*A depiction of the VCR pipeline with image segmentation, concept formation, and data slicing*
 
 And (2) ICQ, an index for spatial-semantic image search that enables efficient compression and search via concept-aware quantization and filtering. 
 <figure>
 <img src="docs/icq_diag.png" height="400">
-<figcaption>A depiction of ICQ's quantization and filtering for spatial-semantic image search</figcaption>
+<!-- <figcaption>A depiction of ICQ's quantization and filtering for spatial-semantic image search</figcaption> -->
 </figure>
-
+*A depiction of ICQ's quantization and filtering for spatial-semantic image search*
 
 ## VCR
 The VCR folder contains code for:
